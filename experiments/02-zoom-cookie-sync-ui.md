@@ -36,7 +36,7 @@ ascii_art: |
   ╚═══════════════════════════════════════╝
 ---
 
-# Experiment #2: Zoom Cookie Sync - Client Distribution UX
+# Zoom Cookie Sync - Client Distribution UX
 
 **By Micah Johnson (with Claude Code)**
 

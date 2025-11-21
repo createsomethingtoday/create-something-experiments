@@ -52,7 +52,7 @@ ascii_art: |
   ╚═══════════════════════════════════════╝
 ---
 
-# Experiment #5: Cloudflare Workflows for AI Agents
+# Cloudflare Workflows for AI Agents
 
 ## 1. Problem / Context
 

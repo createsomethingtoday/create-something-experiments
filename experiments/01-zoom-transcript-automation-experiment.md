@@ -18,7 +18,7 @@ stack: ["Python", "Selenium", "Flask", "Cloudflare Workers", "Railway", "Claude 
 github_url: "https://github.com/createsomethingtoday/zoom-transcript-extractor"
 ---
 
-# Experiment #1: Building Zoom Transcript Automation with Claude Code + Cloudflare
+# Building Zoom Transcript Automation with Claude Code + Cloudflare
 
 **By Huzaifa Tofeeq (Initial Implementation) & Micah Johnson (Cloudflare Migration)**
 

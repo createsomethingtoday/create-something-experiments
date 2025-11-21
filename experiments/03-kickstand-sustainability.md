@@ -52,7 +52,7 @@ ascii_art: |
   ╚═══════════════════════════════════════╝
 ---
 
-# Experiment #3: Bug Fixes as Sustainability Experiments
+# Bug Fixes as Sustainability Experiments
 
 ---
 

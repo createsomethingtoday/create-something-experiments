@@ -52,7 +52,7 @@ ascii_art: |
   ╚═══════════════════════════════════════╝
 ---
 
-# Experiment #4: Software Hermeneutics
+# Software Hermeneutics
 
 ## 1. Problem / Context
 

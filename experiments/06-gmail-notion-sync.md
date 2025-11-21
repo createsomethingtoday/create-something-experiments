@@ -52,7 +52,7 @@ ascii_art: |
   ╚═══════════════════════════════════════╝
 ---
 
-# Experiment #6: Multi-User Gmail→Notion Sync
+# Multi-User Gmail→Notion Sync
 
 ## 1. Problem / Context
 
