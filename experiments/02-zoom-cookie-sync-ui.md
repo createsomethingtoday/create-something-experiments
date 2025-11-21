@@ -23,27 +23,47 @@ implementation_time: "2 hours"
 published_at: "2025-11-20T00:00:00Z"
 meta_title: "Zoom Cookie Sync UI: Bookmarklet + Chrome Extension | CREATE SOMETHING"
 meta_description: "Building client distribution tools with AI assistance: bookmarklet and Chrome extension to reduce user friction from 60 seconds to 0 seconds."
+ascii_art: |
+  ╔═══════════════════════════════════════╗
+  ║  EXPERIMENT #2: COOKIE SYNC UX        ║
+  ║  ────────────────────────────────────  ║
+  ║  🔖 Bookmarklet + 🧩 Chrome Extension  ║
+  ║  User Friction: 60s → 5s → 0s         ║
+  ║                                       ║
+  ║  DEV TIME: 2hrs | TIME SAVED: 67%    ║
+  ║  CLOUDFLARE: $0/mo | ROI: 20,000%    ║
+  ║  STACK: JS + Chrome API + Workers    ║
+  ╚═══════════════════════════════════════╝
 ---
 
 # Experiment #2: Zoom Cookie Sync - Client Distribution UX
 
 **By Micah Johnson (with Claude Code)**
 
+```
+╔═══════════════════════════════════════╗
+║  🔖 BOOKMARKLET + 🧩 EXTENSION        ║
+║  ────────────────────────────────────  ║
+║  User Friction Reduction              ║
+║  60 seconds → 5s → 0s                 ║
+╚═══════════════════════════════════════╝
+```
+
 ## Quick Stats
 
 | Metric | Value |
 |--------|-------|
-| **Development Time** | ~2 hours |
-| **Manual Estimate** | ~6 hours |
+| **Development Time** | 2 hours |
+| **Manual Estimate** | 6 hours |
 | **Time Saved** | 67% |
 | **AI Cost** | ~$2 |
-| **Cloudflare Cost** | $0 |
+| **Cloudflare Cost** | $0/month |
 | **ROI** | 20,000% |
 | **Deploys** | 6 iterations |
 | **Files Created** | 8 files |
 | **Status** | ✅ Deployed & Working |
 
-## The Problem
+## 1. Problem / Context
 
 The Zoom transcript scraper worker (from Experiment #1) required users to manually extract cookies via DevTools and paste them into an upload form. This was:
 
@@ -54,7 +74,16 @@ The Zoom transcript scraper worker (from Experiment #1) required users to manual
 
 Users needed to re-sync cookies every 24 hours as Zoom sessions expired.
 
-## Hypothesis
+**Traditional solution:** Users manually:
+1. Open DevTools (F12)
+2. Run JavaScript in console to extract cookies
+3. Copy output
+4. Paste into upload form
+5. Submit
+
+**Result:** 60+ seconds per sync, daily friction, technical barrier.
+
+## 2. Hypothesis
 
 **I hypothesized that:** Creating client-side cookie extraction tools (bookmarklet + Chrome extension) would reduce user friction from 60 seconds to 5 seconds (bookmarklet) or 0 seconds (extension with auto-sync), while maintaining 100% Cloudflare-native architecture.
 
@@ -65,7 +94,9 @@ Users needed to re-sync cookies every 24 hours as Zoom sessions expired.
 - ✅ Zero backend changes (worker already has CORS-enabled /upload-cookies endpoint)
 - ✅ Downloadable extension with installation page
 
-## What We Built
+**Key insight:** The problem wasn't the backend—it was the **client distribution layer**. Users needed tools that met them where they were.
+
+## 3. What We Built
 
 ### 1. Bookmarklet Solution
 
@@ -107,7 +138,9 @@ Branded download page with:
 
 **Live:** https://zoom-browser-scraper.half-dozen.workers.dev/extension.html
 
-## The Build Process
+---
+
+## 4. The Build Process
 
 ### Session Timeline
 
@@ -124,11 +157,14 @@ Branded download page with:
 | **Challenge 5** | Brand matching (analyzed main site CSS) | 20 min |
 | Installation page | Created extension.html download page | 15 min |
 
-**Total Development Time:** ~2 hours
-**Estimated Manual Development Time:** ~6 hours
-**Time Savings:** ~67%
+**Total Development Time:** 2 hours
+**Estimated Manual Development Time:** 6 hours
+**Time Savings:** 67%
+**Iteration Speed:** ~20 minutes per deploy-test-fix cycle
 
-## Major Challenges
+---
+
+## 5. Major Challenges
 
 ### Challenge 1: Bookmarklet Not Accessible
 - **Issue:** Worker had no route for `/sync.html`
@@ -173,7 +209,9 @@ if (request.method === 'OPTIONS') {
 - **Time to fix:** 20 minutes
 - **Learning:** Always check the actual brand guidelines first, not assumptions
 
-## What Claude Code Did Well
+---
+
+## 6. What Claude Code Did Well
 
 ### 1. Full-Stack Implementation Without Context Switching
 
@@ -279,9 +317,12 @@ async function syncCookies(isAuto = false) {
 - **Could AI have done this:** No - requires Chrome browser
 - **Time spent:** 2 minutes
 
-**Total intervention time:** ~6 minutes
+**Total intervention time:** 6 minutes
+**AI autonomy:** 95% (117 minutes AI, 6 minutes human)
 
-## Cost Analysis
+---
+
+## 7. Cost Analysis
 
 ### Development Costs
 
@@ -305,7 +346,9 @@ async function syncCookies(isAuto = false) {
 - **Return:** ~4 hours of developer time ($400)
 - **ROI:** 20,000%
 
-## Cloudflare Architecture
+---
+
+## 8. Cloudflare Architecture
 
 ### Resources Used
 
@@ -328,7 +371,9 @@ async function syncCookies(isAuto = false) {
 - Global edge distribution for free
 - Zero cold start (worker always warm)
 
-## Success Criteria Results
+---
+
+## 9. Success Criteria Results
 
 - ✅ **Bookmarklet works in <5 seconds:** Actual: ~5 seconds (drag once, click daily)
 - ✅ **Extension auto-syncs every 20 hours:** Implemented with Chrome alarms API
@@ -344,7 +389,9 @@ User friction reduced from 60 seconds (manual DevTools) to:
 
 While maintaining 100% Cloudflare-native architecture.
 
-## What This Proves
+---
+
+## 10. What This Proves
 
 ✅ **AI can rapidly create client-side distribution tools** - Both solutions built in 2 hours
 ✅ **Brand consistency is achievable by referencing existing codebases** - Claude accurately extracted and applied design system
@@ -359,15 +406,20 @@ While maintaining 100% Cloudflare-native architecture.
 ❌ **Whether bookmarklet works in all browsers** - Only tested in Chrome
 ❌ **Whether 20-hour auto-sync is the right interval** - Needs user feedback
 
-## Key Learnings
+---
+
+## 11. Key Learnings
 
 1. **Always check brand guidelines first** - Assumptions about design lead to rework
 2. **CORS must be explicit for bookmarklets** - Cross-origin fetch needs OPTIONS handler
 3. **Chrome extension icons are required** - Even placeholder PNGs satisfy manifest validation
 4. **Cloudflare --assets flag is magical** - Static files colocated with worker, zero config
 5. **Auto-sync UX is vastly superior** - 20-hour alarm eliminates all user friction
+6. **Client distribution matters as much as backend** - Best API is useless with poor client UX
 
-## Reproducibility
+---
+
+## 12. Reproducibility
 
 ### Prerequisites
 - Cloudflare Workers account (free tier works)
@@ -391,7 +443,9 @@ Both should POST cookies to my /upload-cookies endpoint and match my brand.
 3. **Storage undefined** - Add "storage" permission to manifest.json
 4. **Brand mismatch** - Reference your actual design system, don't assume
 
-## Next Steps
+---
+
+## 13. Next Steps
 
 1. **Add usage analytics** - Track bookmarklet vs extension adoption
 2. **Test Firefox compatibility** - Build WebExtension variant
