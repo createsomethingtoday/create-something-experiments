@@ -1,7 +1,7 @@
 ---
 id: software-hermeneutics-kickstand
 slug: software-hermeneutics-kickstand
-title: "Experiment #4: Software Hermeneutics - Using Heidegger's Circle to Debug Ontological Code Confusion"
+title: "Software Hermeneutics - Using Heidegger's Circle to Debug Ontological Code Confusion"
 category: methodology
 description: Applied Heidegger's hermeneutic circle to resolve a code paradox that defeated linear analysis. System had critical bugs that should prevent startup, yet was running in production.
 

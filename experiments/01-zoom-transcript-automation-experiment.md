@@ -1,7 +1,7 @@
 ---
 id: "zoom-transcript-automation-experiment"
 slug: "zoom-transcript-automation-experiment"
-title: "Experiment #1: Building Zoom Transcript Automation with Claude Code + Cloudflare"
+title: "Building Zoom Transcript Automation with Claude Code + Cloudflare"
 category: "Browser Automation"
 created_at: "2025-11-20"
 published: true

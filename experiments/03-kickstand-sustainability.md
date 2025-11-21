@@ -1,7 +1,7 @@
 ---
 id: kickstand-sustainability-nov-2025
 slug: kickstand-sustainability-nov-2025
-title: "Experiment #3: Bug Fixes as Sustainability Experiments - Optimizing AI-Native System Constraints"
+title: "Bug Fixes as Sustainability Experiments - Optimizing AI-Native System Constraints"
 category: infrastructure
 description: Transformed bug fixing into experimental research by applying hermeneutic analysis to system failures. Fixed duplicate detection bug and optimized costs from $505/mo to $45/mo (92% savings).
 

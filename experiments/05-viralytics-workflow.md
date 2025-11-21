@@ -1,7 +1,7 @@
 ---
 id: viralytics-workflow
 slug: viralytics-workflow
-title: "Experiment #5: Cloudflare Workflows for Long-Running AI Agents - A&R Discovery Automation"
+title: "Cloudflare Workflows for Long-Running AI Agents - A&R Discovery Automation"
 category: infrastructure
 description: Replaced $49-85/mo infrastructure (Heroku, PostgreSQL, Redis) with Cloudflare serverless ($0.60/mo) for 8-minute AI agent execution. Successfully processes 51 artists daily with OpenAI + Perplexity.
 

@@ -1,7 +1,7 @@
 ---
 id: "zoom-cookie-sync-ui"
 slug: "zoom-cookie-sync-ui"
-title: "Experiment #2: Zoom Cookie Sync - Client Distribution UX"
+title: "Zoom Cookie Sync - Client Distribution UX"
 category: "Browser Automation"
 created_at: "2025-11-20"
 published: true

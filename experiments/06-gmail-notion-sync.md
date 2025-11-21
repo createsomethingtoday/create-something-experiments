@@ -1,7 +1,7 @@
 ---
 id: gmail-notion-multi-user-sync
 slug: gmail-notion-multi-user-sync
-title: "Experiment #6: Multi-User Gmail→Notion Sync - OAuth, HTML Parsing, and AI Summarization at Scale"
+title: "Multi-User Gmail→Notion Sync - OAuth, HTML Parsing, and AI Summarization at Scale"
 category: automation
 description: Built production-ready multi-user Gmail→Notion sync in 11 hours (vs 25-30 hours manual, 55-65% time savings). Features OAuth 2.0 for multiple users, HTML→Notion block conversion, Workers AI summarization, 5-minute cron sync.
 
